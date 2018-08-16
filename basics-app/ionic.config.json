@@ -1,0 +1,7 @@
+{
+  "name": "basics-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

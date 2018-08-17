@@ -15,4 +15,40 @@ export class UsersPage {
       userName: name
     });
   }
+
+  ionViewCanEnter(): boolean | Promise<void> {
+    console.log('in ionViewCanEnter');
+    const random = Math.random();
+    return random > 0.5;
+  }
+
+  ionViewDidLoad() {
+    console.log('in ionViewDidLoad');
+  }
+
+  ionViewWillUnload() {
+    console.log('in ionViewWillUnload');
+  }
+
+  ionViewWillEnter() {
+    console.log('in ionViewWillEnter');
+  }
+
+  ionViewCanLeave(): boolean | Promise<{}> {
+    console.log('in ionViewCanLeave');
+    const promise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve();
+      }, 1000);
+    });
+    return promise;
+  }
+
+  ionViewWillLeave() {
+    console.log('in ionViewWillLeave');
+  }
+
+  ionViewDidLeave() {
+    console.log('in ionViewDidLeave');
+  }
 }
